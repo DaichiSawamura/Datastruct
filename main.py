@@ -20,10 +20,3 @@ class Stack:
         self.top = self.top.next_node
         return remove.data
 
-
-stack = Stack()
-stack.push('data1')
-stack.push('data2')
-data = stack.pop()
-print(stack.top.data)
-print(data)
