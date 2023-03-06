@@ -33,8 +33,9 @@ class TestMain(unittest.TestCase):
     def test_pop(self):
         self.assertEqual(stack.top.data, 'data2')
 
-    def test_Queue(self):
+    def test_Queue_enqueue(self):
         self.assertEqual(queue.head.data, 'data1')
         self.assertEqual(queue.head.next_node.data, 'data2')
         self.assertEqual(queue.tail.data, 'data3')
         self.assertEqual(queue.tail.next_node, None)
+

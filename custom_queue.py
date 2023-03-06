@@ -4,7 +4,7 @@ class Node:
         self.next_node = next_node
 
 
-class Queue():
+class Queue:
     def __init__(self, head=None, tail=None):
         self.head = head
         self.tail = tail
@@ -18,12 +18,19 @@ class Queue():
             self.tail.next_node = new_node
             self.tail = new_node
 
+    def dequeue(self):
+        if self.head is None:
+            return None
+        else:
+            dequeue_element = self.head
+            self.head = self.head.next_node
+            return dequeue_element.data
+
 
 queue = Queue()
 queue.enqueue('data1')
 queue.enqueue('data2')
 queue.enqueue('data3')
-print(queue.head.data)
-print(queue.head.next_node.data)
-print(queue.tail.data)
-print(queue.tail.next_node)
+print(queue.dequeue())
+print(queue.dequeue())
+print(queue.dequeue())
