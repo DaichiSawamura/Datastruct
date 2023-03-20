@@ -1,4 +1,4 @@
-class Node:
+class Node2:
     def __init__(self, data):
         self.data = data
         self.next_node = None
@@ -11,7 +11,7 @@ class LinkedList:
         self.tail = None
 
     def insert_beginning(self, data):
-        new_node = Node(data)
+        new_node = Node2(data)
         if self.head is None:
             self.head = new_node
             self.tail = new_node
@@ -20,7 +20,7 @@ class LinkedList:
             self.head = new_node
 
     def insert_at_end(self, data):
-        new_node = Node(data)
+        new_node = Node2(data)
         if self.tail is None:
             self.head = new_node
             self.tail = new_node

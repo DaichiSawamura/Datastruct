@@ -1,6 +1,7 @@
 import unittest
 from main import *
 from custom_queue import *
+from linked_list import *
 
 n1 = Node(5, None)
 n2 = Node('a', n1)
@@ -38,4 +39,9 @@ class TestMain(unittest.TestCase):
         self.assertEqual(queue.head.next_node.data, 'data2')
         self.assertEqual(queue.tail.data, 'data3')
         self.assertEqual(queue.tail.next_node, None)
+
+    def test_linked_list(self):
+        self.assertEqual(ll.head, None)
+        self.assertEqual(ll.tail, None)
+        self.assertEqual(ll.print_ll(), None)
 
