@@ -18,6 +18,7 @@ queue.enqueue('data1')
 queue.enqueue('data2')
 queue.enqueue('data3')
 
+ll = LinkedList()
 
 class TestMain(unittest.TestCase):
     def test_Node(self):
